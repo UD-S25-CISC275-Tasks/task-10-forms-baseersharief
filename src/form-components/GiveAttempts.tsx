@@ -14,11 +14,15 @@ export function GiveAttempts(): React.JSX.Element {
                 <Form.Control
                     type="number"
                     value={requestAmount}
-                    onChange={(e) => setRequestAmount(e.target.value)}
+                    onChange={(e) => {
+                        setRequestAmount(e.target.value);
+                    }}
                 />
             </Form.Group>
             <Button
-                onClick={() => setAttempts(attempts - 1)}
+                onClick={() => {
+                    setAttempts(attempts - 1);
+                }}
                 disabled={attempts === 0}
             >
                 Use

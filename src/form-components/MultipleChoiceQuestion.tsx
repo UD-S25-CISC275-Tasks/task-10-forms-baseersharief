@@ -17,7 +17,9 @@ export function MultipleChoiceQuestion({
                 <Form.Label>Select an answer:</Form.Label>
                 <Form.Select
                     value={selectedAnswer}
-                    onChange={(e) => setSelectedAnswer(e.target.value)}
+                    onChange={(e) => {
+                        setSelectedAnswer(e.target.value);
+                    }}
                 >
                     {options.map((option) => (
                         <option key={option} value={option}>
